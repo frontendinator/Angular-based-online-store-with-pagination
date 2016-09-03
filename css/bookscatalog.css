@@ -1,0 +1,174 @@
+#heading-bk {
+	text-align:center;
+	color:green;
+}
+
+#container-bk {
+	width:500px;
+	background-color:#DCDCDC;
+	box-shadow: 0 0 20px #320F3E;
+    -moz-box-shadow: 0 0 20px #320F3E;
+    -webkit-box-shadow: 0 0 20px #320F3E;
+	margin: 39px auto 39px;
+	padding:10px;
+	border-radius: 5px;
+}
+
+#image-bk {
+	width:100px;
+	margin-top: 3px;
+}
+
+#image-bk:hover {
+	cursor:pointer;
+	width:101px;
+	opacity: 0.87;
+}
+
+#bookinf-bk {
+	width:490px;
+}
+
+#bookinf-bk1 {
+	width:105px;
+	float:left;
+}
+
+#bookinf-bk2 {
+	width:375px;
+	margin: 0 0 0 10px;
+}
+
+.book-bk {
+	display:inline-block;
+}
+
+#bookinfbottom-bk {
+	width:490px;
+	margin-top: 30px;
+}
+
+ul.vkladki-bk {
+	padding: 0;
+	margin: 0;
+}
+
+.vkladki-bk li {
+	display:inline;
+	padding:2px 10px 9px 10px;
+	vertical-align: middle;
+	cursor:pointer;
+	color:darkgreen;
+}
+
+.opys-bk {
+	background-color:#C3BFBF;
+	margin-top: -9px;
+	margin-bottom: 5px;
+	text-align: justify;
+	display:block;
+	padding: 7px;
+}
+
+ul.vkladki-bk li:hover {
+	border-color: lightgrey;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	background-color: #C3BFBF;
+}
+
+ul.vkladki-bk li:active {
+	border-color: grey;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	background-color: #C3BFBF;
+}
+.activebk {
+	border-color: darkgrey;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	background-color: #C3BFBF;
+}
+
+.filter-bk {
+	text-align: center;
+	font-family: cursive;
+    font-size: 13px;
+    font-weight: 700;
+    color: #920E20;
+}
+
+.filter-bk input, .filter-bk select {
+	width: 125px;
+}
+
+.filter-bk input {
+	width: 123px;
+}
+
+#filterone-bk {
+	position: relative;
+	left:39px;
+	margin-left: 108px;
+}
+
+#filtertwo-bk {
+	position: relative;
+	right: 3px;
+    margin-left: 60px;
+}
+
+#filterthree-bk {
+	position: relative;
+	left:39px;
+}
+
+#filterfour-bk {
+	position: relative;
+	right: 15px;
+    margin-left: 232px;
+    width: 231px;
+}
+
+#filterfour-bk p {
+	font-size: 11px;
+}
+
+textarea, #forinput-bk  {
+	color:grey;
+}
+
+#searchblock-bk {
+	border: 1px dashed grey;
+    width: 379px;
+    margin: 20px auto 39px;
+    padding-left: 25px;
+}
+
+h4#headinghfor-bk {
+	margin: 3px 0 7px 0;
+}
+
+h2#heading-bk {
+	margin-top: 2px;
+}
+
+#bigpicture-bk {
+	display:none;
+	z-index:2;
+	position: fixed;
+    top: 29%;
+    left: 43%;
+}
+
+#foroverlay {
+	display:none;
+  	width: 100%;
+  	height: 100%;
+  	background-color: #000;
+  	left: 0;
+ 	opacity: 0.75;
+  	position: fixed;
+  	top: 0;
+  	z-index: 1;
+}

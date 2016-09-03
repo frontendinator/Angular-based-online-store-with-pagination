@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html data-ng-app="catalBooks">
+<head>
+	<meta title="Методичні посібники для вчителя 2016-2017" charset="UTF-8">
+	<title>Методичні посібники для вчителя 2016-2017</title>
+	<link rel="stylesheet" href="css/bookscatalog.css" >
+	<link rel="stylesheet" href="css/styleforpagin.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="js/bookscatalog.js"></script>
+	<script src="js/bigpicture.js"></script>
+	<script src="js/dirPagination.js"></script>
+</head>
+<body data-ng-controller="mycatalBooks">
+	<div id="foroverlay" onclick="removeoverlay()"></div>
+	<div id="bigpicture-bk"></div>
+	<h2 id="heading-bk">Обирайте методичні посібники для нового навчального року</h2>
+	<div id="searchblock-bk">
+		<div class="filter-bk" id="filterone-bk"><p>Знайти: <input type="text" data-ng-model="sear"></p></div>
+		<div class="filter-bk" id="filtertwo-bk"><p>Відсортувати за предметом: <select data-ng-model="sear">
+			<option>Англійська мова</option>
+            <option>Біологія</option>
+            <option>Всесвітня історія</option>
+            <option>Географія</option>
+            <option>Геометрія</option>
+            <option>Захист Вітчизни</option>
+            <option>Інформатика</option>
+            <option>Історія України</option>
+            <option>Літературне читання</option>
+            <option>Математика</option>
+            <option>Музичне мистецтво</option>
+            <option>Навчання грамоти</option>
+            <option>Німецька мова</option>
+            <option>Образотворче мистецтво</option>
+            <option>Основи здоров'я</option>
+            <option>Правознавство</option>
+            <option>Природознавство</option>
+            <option>Світова література</option>
+			<option>Трудове навчання</option>
+            <option>Українська література</option>
+            <option>Українська мова</option>
+            <option>Фізика</option>
+            <option>Фізична культура</option>
+            <option>Хімія</option>
+            <option>Я у світі</option>
+            </select></p>
+		</div>
+		<div class="filter-bk" id="filterthree-bk"><p>Відсортувати за класом: <select data-ng-model="sear">
+			<option>1 клас</option>
+            <option>2 клас</option>
+            <option>3 клас</option>
+            <option>4 клас</option>
+            <option>5 клас</option>
+			<option>6 клас</option>
+			<option>7 клас</option>
+            <option>8 клас</option>
+            <option>9 клас</option>
+            <option>10 клас</option>
+            <option>11 клас</option>
+            </select></p>
+		</div>
+		<div id="filterfour-bk"><p>Книг на сторінці: <input type="number" min="1" max="215" data-ng-model="pageSize"></p>
+		</div>
+	</div>
+	<div dir-paginate="book in books | filter: sear | itemsPerPage: pageSize" current-page="currentPage" id="container-bk">
+		<h4 id="headinghfor-bk">{{book.name}}</h4>
+		<div id="bookinf-bk">
+			<div id="bookinf-bk1" class="book-bk"><img data-ng-src="{{book.wrapper}}" src="#" id="image-bk" onclick="bigpictur(event)" alt="wrapper"></div>
+			<div id="bookinf-bk2" class="book-bk">{{book.annotation}}</div>
+		</div>
+		<div id="bookinfbottom-bk">
+			<ul class="vkladki-bk" data-ng-init="show=1">
+				<li data-ng-click="show = 1" data-ng-class="{activebk: show === 1}">Опис</li>
+				<li data-ng-click="show = 2" data-ng-class="{activebk: show === 2}">Вартість</li>
+				<li data-ng-click="show = 3" data-ng-class="{activebk: show === 3}">Купити</li>
+			</ul>
+			<hr>
+			<div class="opys-bk" data-ng-show="show === 1" >{{book.description}}</div>
+			<div class="opys-bk" data-ng-show="show === 2"><b>{{book.price}} грн. </b><br> Способи оплати: банківська картка, Webmoney, особистий рахунок</div>
+			<div class="opys-bk" data-ng-show="show === 3"><a data-ng-href="{{book.pass}}" target="blank">Перейти в інтернет-магазин</a></div>
+		</div>
+	</div>
+	<div ng-controller="OtherController" class="other-controller">
+          <div class="text-center">
+          <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="templates/dirPagination.tpl.html"></dir-pagination-controls>
+          </div>
+    </div>
+</body>
+</html>
