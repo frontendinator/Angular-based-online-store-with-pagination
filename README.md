@@ -10,7 +10,7 @@ https://nodejs.org/en/download/
 ###2. Open the Node.js command prompt, go into the root project folder and install Express.
 ```$ npm install express```
 
-###3. Create the file server.js inside of root folder and add the following code to this file.
+###3. Create the file ```server.js``` inside of root folder and add the following code to this file.
     var express = require('express');
     var app = express();
     app.use(express.static(__dirname));
@@ -26,7 +26,7 @@ You should see the text "server is running at port 7500..." in CLI.
 
 ###5. Drop the link ```http://localhost:7500``` in the address bar of your browser. Press Enter and enjoy the magic...
 
-You can also use browser Firefox to view this application without setting up the local server. Just open file ```index.html``` by mentioned browser.
+To view this application without setting up the local server you can use browser Firefox. Just open file ```index.html``` by mentioned browser.
 
 ##Acknowledgements
 I want to thank Michael Bromley ```https://github.com/michaelbromley``` for his elegant paginator which I used in my application.
