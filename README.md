@@ -1,5 +1,5 @@
-# angular-based-online-store-with-pagination
-For those who need a draft for online store with basic features (showcase for goods, items search, items filter, item view magnifier, paginator etc)
+# Angular-based online store with pagination
+For those who need a draft for online store with basic features (showcase for goods, items search, items filter, item view magnifier, paginator etc).
 The main framework of this application is AngularJS-1. The items data is stored in json-file and getting from it by HTTP GET method.
 
 In order to view correctly, this application should be launched through the server (no matter local or remote). If you want to create server on your local computer you should do the following.
