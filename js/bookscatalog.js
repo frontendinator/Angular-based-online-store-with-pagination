@@ -11,4 +11,4 @@ bookcatal.controller('OtherController', function OtherController($scope) {
   $scope.pageChangeHandler = function(num) {
     console.log('going to page ' + num);
   };
-});
+}); 
