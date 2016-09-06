@@ -27,4 +27,4 @@ function removeoverlay() {
 	removepicture.style.display = "none";
 };
 
-document.addEventListener('load', removeoverlay);
+document.addEventListener('load', removeoverlay); 
